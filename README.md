@@ -49,8 +49,9 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 jupyter notebook notebooks/01-demo.ipynb
 ```
-> **Mac:** si al descargar los datos sale `CERTIFICATE_VERIFY_FAILED`, ...
-> `open "/Applications/Python 3.12/Install Certificates.command"` ...
+
+> **Mac:** si al descargar los datos sale `CERTIFICATE_VERIFY_FAILED`, ejecuta una vez el instalador de certificados de Python:
+> `open "/Applications/Python 3.12/Install Certificates.command"` (cambia `3.12` por tu versión).
 
 ## Tecnologías
 
