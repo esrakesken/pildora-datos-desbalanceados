@@ -34,7 +34,9 @@ La accuracy más alta es la del modelo que **no detecta nada**.
 
 ```
 ├── notebooks/
-│   └── 01-demo.ipynb      # demo de la píldora
+│   ├── 01-demo.ipynb          # demo de la píldora (datos sintéticos)
+│   ├── 02-ejercicios.ipynb    # ejercicios con datos reales de fraude
+│   └── 03-soluciones.ipynb    # soluciones de los ejercicios
 ├── requirements.txt
 └── README.md
 ```
