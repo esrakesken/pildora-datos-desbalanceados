@@ -17,6 +17,8 @@ Píldora del bootcamp de IA de Factoría F5 Barcelona · **12/11/2026** · Esra 
 
 ## Resultados · Results
 
+### Datos sintéticos · Synthetic data (demo)
+
 Dataset sintético (`make_classification`): 10.000 transacciones, ≈ 1,5 % de fraudes. Regresión logística.
 
 | Técnica | Accuracy | Precision | Recall | F1 |
@@ -29,6 +31,20 @@ Dataset sintético (`make_classification`): 10.000 transacciones, ≈ 1,5 % de f
 | Umbral 0,03 | 0,906 | 0,072 | 0,455 | 0,125 |
 
 La accuracy más alta es la del modelo que **no detecta nada**.
+
+### Datos reales · Real data (ejercicios)
+
+Dataset real de fraudes con tarjeta (OpenML 1597): 284.807 transacciones, 492 fraudes (0,17 %). Coste: **5 €** por falsa alarma y **200 €** por fraude no detectado.
+
+| Técnica | Precision | Recall | F1 | Coste |
+|---|---|---|---|---|
+| Baseline (sin tratar) | 0,858 | 0,615 | 0,717 | 11.475 € |
+| `class_weight='balanced'` | 0,064 | 0,872 | 0,119 | 13.240 € |
+| SMOTE | 0,080 | 0,858 | 0,146 | 11.550 € |
+| Umbral 0,05 | 0,697 | 0,777 | **0,735** | 6.850 € |
+| Umbral 0,02 | 0,567 | 0,824 | 0,672 | **5.665 €** |
+
+La técnica con más recall (`class_weight`) es la **más cara**; la más barata es bajar el umbral. No hay técnica mágica: depende de lo que cueste cada error.
 
 ## Estructura
 
